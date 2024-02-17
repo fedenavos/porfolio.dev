@@ -1,9 +1,13 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import Link from "./icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
+import GitHub from "./icons/GitHub.astro";
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import React from "./icons/React.astro";
+import Python from "./icons/Python.astro";
+import Flutter from "./icons/Flutter.astro";
+import Unity from "./icons/Unity.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
   NEXT: {
@@ -16,78 +20,143 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
-}
+  REACT: {
+    name: "React",
+    class: "bg-[#3998B6] text-white",
+    icon: React,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#FFDC50] text-black",
+    icon: Python,
+  },
+  FLUTTER: {
+    name: "Flutter",
+    class: "bg-[#3586DB] text-white",
+    icon: Flutter,
+  },
+  UNITY: {
+    name: "Unity",
+    class: "bg-[#CCCCCC] text-black",
+    icon: Unity,
+  },
+};
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Chat-Bot",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Descubre mi Chat bot! Hecho con NextJS y herramientas IA de Cohere. Es una aplicación web que permite interactuar con un chat bot que responde preguntas sobre mi.",
+    link: "https://mibot.vercel.app/",
+    github: "https://github.com/fedenavos/chat-bot",
+    logo: "/projects/chatbot.webp",
+    previewImage: "/projects/demo-chatbot.png",
+    tags: [TAGS.NEXT],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Lookeando",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Aplicación web hecha con React en el front-end y Flask en el back-end. La plataforma conecta a los usuarios con diversos servicios de belleza, ofreciendo un mapa interactivo y reseñas auténticas.",
+    link: "https://lookeando.com",
+    logo: "/projects/lookeando.png",
+    previewImage: "/projects/lookeando.png",
+    tags: [TAGS.REACT, TAGS.PYTHON],
   },
-]
+  {
+    title: "Gather",
+    description:
+      "Proyecto final de carrera. Aplicación web hecha con Next JS. Una plataforma de carpooling que permite encontrar gente para viajar.",
+    link: "https://gather-vert.vercel.app/",
+    github: "https://github.com/fedenavos/Gather",
+    logo: "/projects/gathertrips.png",
+    previewImage:
+      "https://camo.githubusercontent.com/04901a2aefe366bf5af999067b3f88f46ecc70a35a6578d0905c5b8c1d24fbfa/68747470733a2f2f692e696d6775722e636f6d2f706573534c4e612e706e67",
+    tags: [TAGS.NEXT],
+  },
+  {
+    title: "Repe-app",
+    description:
+      "Aplicación web hecha con React que permite hacer un seguimiento de las figuritas de tu álbum del mundial. También ofrece la posibilidad de ver el álbum del resto de los usuarios de la plataforma.",
+    link: "https://repe-app.vercel.app",
+    github: "https://github.com/fedenavos/repe-app",
+    logo: "/projects/qatar-2022.jpg",
+    previewImage: "/projects/repe-demo.png",
+    tags: [TAGS.REACT],
+  },
+  {
+    title: "Pelibry",
+    description:
+      "App móvil desarrollada con Flutter. Permite anotar películas vistas, puntuarlas y escribir reseñas. Con el nombre de usuario se pueden ver las películas anotadas por otros usuarios.",
+    link: "projects/pelibry",
+    github: "https://github.com/fedenavos/pelibry_app",
+    logo: "/projects/Pelibry.webp",
+    previewImage: "/projects/pelibry-main.jpg",
+    tags: [TAGS.FLUTTER],
+  },
+  {
+    title: "Quedate en casa",
+    description:
+      "Videojuego móvil creado con Unity. El juego fue desarrollado completamente desde cero. Se emplearon plantillas de Unity para los personajes y se crearon algunos diseños propios para añadir un toque único al juego.",
+    link: "projects/coronatime",
+    logo: "/projects/coronatime-logo.png",
+    previewImage: "/projects/coronatime-game2.jpg",
+    tags: [TAGS.UNITY],
+  },
+];
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+    PROJECTS.map(({ logo, title, description, tags, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/3">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl">
+            <img
+              alt={title}
+              class="h-54 aspect-square transition duration-500 sm:h-full md:scale-100 md:group-hover:scale-110"
+              loading="lazy"
+              src={logo}
+            />
+          </div>
+        </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div class="w-full md:w-2/3 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    {tag.icon && <tag.icon class="size-4" />}
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
     ))
   }
 </div>
-
-
-

@@ -1,8 +1,8 @@
 ---
 import "@fontsource-variable/onest"
 
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
+import Header from "./Header.astro"
+import Footer from "./Footer.astro"
 import { ViewTransitions } from "astro:transitions"
 
 interface Props {
@@ -34,6 +34,7 @@ const { description, title } = Astro.props
     </div>
     <Header />
     <slot />
+    <slot name="project" class="project" />
     <Footer />
     <style is:global>
       :root {
@@ -51,6 +52,7 @@ const { description, title } = Astro.props
         flex-direction: column;
         min-height: 100vh;
         overscroll-behavior: none;
+        align-items: center;
       }
 
       @media (prefers-reduced-motion: reduce) {

@@ -2,18 +2,20 @@
 import Layout from "@/layouts/Layout.astro"
 
 import AboutMe from "@/components/AboutMe.astro"
-import Briefcase from "@/components/icons/Briefcase.astro"
-import CodeIcon from "@/components/icons/Code.astro"
 import Experience from "@/components/Experience.astro"
-import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import Hero from "@/components/Hero.astro"
+import Contact from "@/components/Contact.astro"
 import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
-import Hero from "@/components/Hero.astro"
+import Briefcase from "@/components/icons/Briefcase.astro"
+import CodeIcon from "@/components/icons/Code.astro"
+import ContactIcon from "@/components/icons/ContactIcon.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
 ---
 
 <Layout
-  title="Porfolio de midudev - Desarrollador y Programador Web con 15 años de experiencia"
-  description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+  title="Portfolio de Federico - Desarrollador FullStack"
+  description="Desarrollador FullStack. Especializado en crear soluciones únicas."
 >
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
@@ -51,6 +53,15 @@ import Hero from "@/components/Hero.astro"
       </h2>
       <AboutMe />
     </SectionContainer>
+
+    <SectionContainer id="contacto">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+      >
+        <ContactIcon class="size-8" />
+        Contacto
+      </h2>
+      <Contact />
   </div>
   </main>
 </Layout>

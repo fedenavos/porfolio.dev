@@ -1,48 +1,53 @@
 ---
-const personalImageAlt = "Miguel Ángel"
-import Badge from "@/components/Badge.astro"
-import LinkedInIcon from "@/components/icons/LinkedIn.astro"
-import MailIcon from "@/components/icons/Mail.astro"
-import SocialPill from "@/components/SocialPill.astro"
+const personalImageAlt = "Federico Navós";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import GitHub from "./icons/GitHub.astro";
+import Badge from "./Badge.astro";
+import NewWindow from "./icons/NewWindow.astro";
 ---
 
 <div class="max-w-xl">
   <div class="flex gap-4 mb-4">
     <img
-      class="rounded-full shadow-lg size-16"
-      src="/midudev.webp"
+      class="rounded-full shadow-lg size-24"
+      src="/fedenavos.webp"
       alt={personalImageAlt}
     />
     <a
-      href="https://linkedin.com/in/midudev"
+      href="https://mibot.vercel.app/"
       target="_blank"
       rel="noopener"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
+      class="flex items-center transition ml-2 md:justify-center md:hover:scale-105"
     >
-      <Badge>Disponible para trabajar</Badge>
+      <Badge>Conoce más sobre mí <NewWindow  class="size-4 ml-3 mb-1"/></Badge>
     </a>
   </div>
   <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
-    Hey, soy midudev
+    Hola, soy Fede
   </h1>
   <p
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-blue-200 [&>strong]:text-blue-500 [&>strong]:font-semibold dark:text-gray-300"
   >
-    +15 años de experiencia. <strong
-      >Ingeniero de Software y Creador de Contenido sobre Programación</strong
-    > de Barcelona, España 🇪🇸. Especializado en el desarrollo de aplicaciones web
-    únicas.
+    <strong>Ingeniero en Sistemas de Información</strong
+    > de Rosario, Argentina. +3 años de experiencia en desarrollo back-end
+    con Python y competencias en desarrollo front-end con React.
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="mailto:miduga@gmail.com">
+    <SocialPill href="mailto:fedenavos@gmail.com">
       <MailIcon class="size-4" />
       Contáctame
     </SocialPill>
-    <SocialPill href="https://linkedin.com/in/midudev">
+    <SocialPill href="https://www.linkedin.com/in/federico-navos/">
       <LinkedInIcon class="size-4" />
       LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/fedenavos">
+      <GitHub class="size-4" />
+      Github
     </SocialPill>
   </nav>
 </div>
