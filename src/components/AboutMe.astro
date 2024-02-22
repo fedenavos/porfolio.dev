@@ -1,5 +1,6 @@
 ---
 const personalImageAlt = "Federico Navós";
+import { t } from "i18next";
 ---
 
 <article
@@ -8,28 +9,9 @@ const personalImageAlt = "Federico Navós";
   <div
     class="[&>p]:mb-4 [&>p>strong]:text-blue-500 dark:[&>p>strong]:text-blue-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
-    <p>
-      Me llamo Federico Navós y mis amigos me dicen Fede. Tengo 23 años y soy de
-      Rosario. Terminé mis estudios como <strong
-        >Ingeniero en Sistemas de Información</strong
-      > a fines del 2022.
-    </p>
-
-    <p>
-      Con habilidades en <strong>Python y React</strong>, mi especialidad es dar
-      vida a las ideas mediante el desarrollo Full Stack. Para mí, ser
-      desarrollador va más allá de programar; es un proceso de exploración y
-      creación.
-    </p>
-
-    <p>
-      Más allá de buscar ampliar mi stack tecnológico, me gusta investigar sobre
-      nuevas tecnologías y cómo estas pueden impactar en la vida de las
-      personas. Me entusiasma el futuro de la <strong
-        >inteligencia artificial</strong
-      > y también el de la <strong>criptomonedas</strong>, lo que me ha llevado
-      a realizar charlas sobre estos temas.
-    </p>
+    <p set:html={t("aboutMe.paragraph1")}></p>
+    <p set:html={t("aboutMe.paragraph2")}></p>
+    <p set:html={t("aboutMe.paragraph3")}></p>
   </div>
 
   <img

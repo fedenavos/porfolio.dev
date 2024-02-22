@@ -1,0 +1,131 @@
+---
+import EnglishIcon from "./icons/English.astro";
+import SpanishIcon from "./icons/Spanish.astro";
+import i18next from "i18next";
+
+const LANGUAGES = [
+  {
+    lan: "English",
+    code: "en",
+  },
+  {
+    lan: "Spanish",
+    code: "es",
+  },
+];
+
+const currentLanguage = i18next.language;
+---
+
+<div class="relative ml-3 mr-1">
+  <button
+    id="language-toggle-btn"
+    class="appearance-none border-none flex hover:scale-125 transition"
+  >
+    <span class="sr-only">Elige el idioma</span>
+    {
+      currentLanguage === "en" ? (
+        <EnglishIcon id="english" class="language-toggle-icon transition-all" />
+      ) : (
+        <SpanishIcon
+          id="spanish"
+          class="language-toggle-icon absolute transition-all"
+        />
+      )
+    }
+  </button>
+  <div
+    id="languages-menu"
+    class="absolute opacity-0 scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/70 dark:bg-gray-900/70 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
+  >
+    <ul>
+      {
+        LANGUAGES.map((language) => (
+          <li
+            class={`languages-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm ${currentLanguage === language["code"] ? 'font-bold' : ''}`}
+          >
+            {language["lan"]}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<style>
+  #languages-menu.open {
+    animation: scale-up-center 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  @keyframes scale-up-center {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+</style>
+
+<script is:inline>
+  const languagesMenu = document.getElementById("languages-menu");
+
+  const getLanguagePreference = () => {
+    const languagePreference = localStorage.getItem("language");
+    if (languagePreference) return languagePreference;
+    const path = window.location.pathname;
+    return path.startsWith("/en") ? "english" : "spanish";
+  };
+
+  const saveLanguagePreference = (language) => {
+    localStorage.setItem("language", language);
+  };
+
+  const updateIconLanguage = (languagePreference) => {
+    document.querySelectorAll(".language-toggle-icon").forEach((element) => {
+      element.style.opacity = element.id === languagePreference ? "1" : "0";
+    });
+  };
+
+  const updateLanguage = (languagePreference) => {
+    saveLanguagePreference(languagePreference);
+    updateIconLanguage(languagePreference);
+
+    // Actualiza el estilo de la opción de menú
+    document.querySelectorAll(".languages-menu-option").forEach((element) => {
+      element.style.fontWeight =
+        element.innerText.toLowerCase().trim() === languagePreference
+          ? "bold"
+          : "normal";
+    });
+
+    // Redirige basado en la preferencia de idioma
+    if (languagePreference === "english") {
+      window.location.pathname = "/en";
+    } else if (languagePreference === "spanish") {
+      window.location.pathname = "/";
+    }
+  };
+
+  document.addEventListener("click", () =>
+    languagesMenu.classList.remove("open"),
+  );
+
+  document
+    .getElementById("language-toggle-btn")
+    .addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isClosed = !languagesMenu.classList.contains("open");
+      languagesMenu.classList[isClosed ? "add" : "remove"]("open");
+    });
+
+  document.querySelectorAll(".languages-menu-option").forEach((element) => {
+    element.addEventListener("click", (e) => {
+      console.log(e.target.innerText.toLowerCase().trim());
+      saveLanguagePreference(e.target.innerText.toLowerCase().trim());
+      updateLanguage(e.target.innerText.toLowerCase().trim());
+    });
+  });
+</script>

@@ -1,0 +1,95 @@
+{
+  "header": {
+    "experience": {
+      "title": "Experiencia",
+      "label": "experiencia"
+    },
+    "projects": {
+      "title": "Proyectos",
+      "label": "proyectos"
+    },
+    "aboutMe": {
+      "title": "Sobre mí",
+      "label": "sobre-mi"
+    },
+    "contact": {
+      "title": "Contacto",
+      "label": "contacto"
+    }
+  },
+  "hero": {
+    "salutation": "Hola, soy Fede",
+    "aboutLink": "Conoce más sobre mí",
+    "profession": "Ingeniero en Sistemas de Información",
+    "description": "de Rosario, Argentina. +3 años de experiencia en desarrollo back-end con Python y competencias en desarrollo front-end con React.",
+    "contactMe": "Contáctame"
+  },
+  "titles": {
+    "experience": "Experiencia laboral",
+    "projects": "Proyectos",
+    "aboutMe": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "experience": [
+    {
+      "date": "Actualmente...",
+      "title": "Desarrollador Python",
+      "company": "DXC Technology",
+      "description": "Mis responsabilidades se centran en impulsar la transición tecnológica a los servicios en la nube de AWS para el cliente Arcos Dorados. Estoy activamente involucrado en el desarrollo de funciones serverless utilizando AWS Lambda e implementando Infraestructura como Código con AWS CDK."
+    },
+    {
+      "date": "Septiembre 2021 - Abril 2023",
+      "title": "Desarrollador Python",
+      "company": "GP Trading",
+      "description": "Fui responsable de desarrollar, implementar y hacer backtesting de estrategias de trading, elaboración de informes, crear sistemas de alerta de señales automáticas vía email, recolectar datos para la toma de decisiones mediante scraping, entre otras tareas."
+    },
+    {
+      "date": "Diciembre 2020 - Abril 2021",
+      "title": "Desarrollador Full-Stack",
+      "company": "NEORIS",
+      "description": "Trabajé como parte de un equipo web, brindando soluciones a una empresa agropecuaria. Mis responsabilidades incluyeron el desarrollo Front-end y Back-end de aplicaciones web y solución de incidencias. Utilicé tecnologías como TypeScript, Angular, HTML5, SQL Server y otras herramientas .NET."
+    }
+  ],
+  "projects": {
+    "chat-bot": {
+      "title": "Chat-Bot",
+      "description": "Descubre mi Chat bot! Hecho con NextJS y herramientas IA de Cohere. Es una aplicación web que permite interactuar con un chat bot que responde preguntas sobre mí."
+    },
+    "lookeando": {
+      "title": "Lookeando",
+      "description": "Aplicación web hecha con React en el front-end y Flask en el back-end. La plataforma conecta a los usuarios con diversos servicios de belleza, ofreciendo un mapa interactivo y reseñas auténticas."
+    },
+    "gather": {
+      "title": "Gather",
+      "description": "Proyecto final de carrera. Aplicación web hecha con Next JS. Una plataforma de carpooling que permite encontrar gente para viajar."
+    },
+    "repe-app": {
+      "title": "Repe-app",
+      "description": "Aplicación web hecha con React que permite hacer un seguimiento de las figuritas de tu álbum del mundial. También ofrece la posibilidad de ver el álbum del resto de los usuarios de la plataforma."
+    },
+    "pelibry": {
+      "title": "Pelibry",
+      "description": "App móvil desarrollada con Flutter. Permite anotar películas vistas, puntuarlas y escribir reseñas. Con el nombre de usuario se pueden ver las películas anotadas por otros usuarios."
+    },
+    "quedate-en-casa": {
+      "title": "Quédate en Casa",
+      "description": "Videojuego móvil creado con Unity. El juego fue desarrollado completamente desde cero. Se emplearon plantillas de Unity para los personajes y se crearon algunos diseños propios para añadir un toque único al juego."
+    }
+  },
+  "aboutMe": {
+    "paragraph1": "Me llamo Federico Navós y mis amigos me dicen Fede. Tengo 23 años y soy de Rosario. Terminé mis estudios como <strong>Ingeniero en Sistemas de Información</strong> a fines del 2022.",
+    "paragraph2": "Con habilidades en <strong>Python y React</strong>, mi especialidad es dar vida a las ideas mediante el desarrollo Full Stack. Para mí, ser desarrollador va más allá de programar; es un proceso de exploración y creación.",
+    "paragraph3": "Más allá de buscar ampliar mi stack tecnológico, me gusta investigar sobre nuevas tecnologías y cómo estas pueden impactar en la vida de las personas. Me entusiasma el futuro de la <strong>inteligencia artificial</strong> y también el de la <strong>criptomonedas</strong>, lo que me ha llevado a realizar charlas sobre estos temas."
+  },
+  "contact": {
+    "labelName": "Nombre",
+    "labelEmail": "Email",
+    "labelMessage": "Mensaje",
+    "buttonSend": "Enviar mensaje",
+    "emailTitle": "Email",
+    "socialTitle": "Sociales"
+  },
+  "footer": {
+    "template": "Portfolio realizado en base a la plantilla de"
+  }
+}

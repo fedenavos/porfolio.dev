@@ -1,0 +1,95 @@
+{
+  "header": {
+    "experience": {
+      "title": "Experience",
+      "label": "experience"
+    },
+    "projects": {
+      "title": "Projects",
+      "label": "projects"
+    },
+    "aboutMe": {
+      "title": "About Me",
+      "label": "about-me"
+    },
+    "contact": {
+      "title": "Contact",
+      "label": "contact"
+    }
+  },
+  "hero": {
+    "salutation": "Hey, I'm Fede",
+    "aboutLink": "Learn more about me",
+    "profession": "Information Systems Engineer",
+    "description": "from Rosario, Argentina. +3 years of backend development experience with Python and frontend development skills with React.",
+    "contactMe": "Contact Me"
+  },
+  "titles": {
+    "experience": "Work Experience",
+    "projects": "Projects",
+    "aboutMe": "About Me",
+    "contact": "Contact"
+  },
+  "experience": [
+    {
+      "date": "Currently...",
+      "title": "Python Developer",
+      "company": "DXC Technology",
+      "description": "My responsibilities focus on driving the technological transition to AWS cloud services for the client Arcos Dorados. I am actively involved in the development of serverless functions using AWS Lambda and implementing Infrastructure as Code with AWS CDK."
+    },
+    {
+      "date": "September 2021 - April 2023",
+      "title": "Python Developer",
+      "company": "GP Trading",
+      "description": "I was responsible for developing, implementing, and backtesting trading strategies, report generation, creating automatic signal alert systems via email, collecting data for decision-making through scraping, among other tasks."
+    },
+    {
+      "date": "December 2020 - April 2021",
+      "title": "Full-Stack Developer",
+      "company": "NEORIS",
+      "description": "I worked as part of a web team, providing solutions to an agricultural company. My responsibilities included Front-end and Back-end development of web applications and incident resolution. I used technologies such as TypeScript, Angular, HTML5, SQL Server, and other .NET tools."
+    }
+  ],
+  "projects": {
+    "chat-bot": {
+      "title": "Chat-bot",
+      "description": "Discover my Chat bot! Made with NextJS and Cohere's AI tools. It's a web application that allows interacting with a chat bot answering questions about me."
+    },
+    "lookeando": {
+      "title": "Lookeando",
+      "description": "A web application made with React on the front-end and Flask on the back-end. The platform connects users with various beauty services, offering an interactive map and authentic reviews."
+    },
+    "gather": {
+      "title": "Gather",
+      "description": "Final project for my degree. A web application made with Next JS. A carpooling platform that allows finding people to travel with."
+    },
+    "repe-app": {
+      "title": "Repe-app",
+      "description": "A web application made with React that allows tracking of your World Cup album stickers. It also offers the possibility to view other users' albums on the platform."
+    },
+    "pelibry": {
+      "title": "Pelibry",
+      "description": "A mobile app developed with Flutter. It allows you to note down movies you've watched, rate them, and write reviews. With a username, you can see the movies noted by other users."
+    },
+    "stay-home": {
+      "title": "Stay Home",
+      "description": "A mobile game created with Unity. The game was developed entirely from scratch. Unity templates were used for the characters, and some custom designs were created to add a unique touch to the game."
+    }
+  },
+  "aboutMe": {
+    "paragraph1": "My name is Federico Navós, and my friends call me Fede. I am 23 years old and from Rosario. I completed my studies as an <strong>Information Systems Engineer</strong> at the end of 2022.",
+    "paragraph2": "With skills in <strong>Python and React</strong>, my specialty is bringing ideas to life through Full Stack development. For me, being a developer goes beyond programming; it's a process of exploration and creation.",
+    "paragraph3": "Beyond looking to expand my technological stack, I enjoy researching new technologies and how they can impact people's lives. I am excited about the future of <strong>artificial intelligence</strong> and <strong>cryptocurrencies</strong>, which has led me to give talks on these topics."
+  },
+  "contact": {
+    "labelName": "Name",
+    "labelEmail": "Email",
+    "labelMessage": "Message",
+    "buttonSend": "Send Message",
+    "emailTitle": "Email",
+    "socialTitle": "Socials"
+  },
+  "footer": {
+    "template": "Portfolio template by"
+  }
+}

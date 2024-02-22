@@ -2,6 +2,7 @@
 import GitHub from "./icons/GitHub.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
 import Instagram from "./icons/Instagram.astro";
+import { t } from "i18next";
 ---
 
 <div class="flex flex-wrap justify-between">
@@ -9,9 +10,12 @@ import Instagram from "./icons/Instagram.astro";
     <form name="contact" method="POST" class="space-y-4">
       <div class="flex flex-wrap -mx-2">
         <div class="w-full md:w-1/2 px-2 mb-4">
-          <label for="name" class="block text-sm font-medium dark:text-gray-200"
-            >Nombre</label
+          <label
+            for="name"
+            class="block text-sm font-medium dark:text-gray-200"
           >
+            {t("contact.labelName")}
+          </label>
           <input
             type="text"
             name="name"
@@ -20,9 +24,12 @@ import Instagram from "./icons/Instagram.astro";
           />
         </div>
         <div class="w-full md:w-1/2 px-2 mb-4">
-          <label for="email" class="block text-sm font-medium dark:text-gray-200"
-            >Email</label
+          <label
+            for="email"
+            class="block text-sm font-medium dark:text-gray-200"
           >
+            {t("contact.labelEmail")}
+          </label>
           <input
             type="text"
             name="email"
@@ -32,9 +39,12 @@ import Instagram from "./icons/Instagram.astro";
         </div>
       </div>
       <div class="px-2 mb-4">
-        <label for="message" class="block text-sm font-medium dark:text-gray-200"
-          >Mensaje</label
+        <label
+          for="message"
+          class="block text-sm font-medium dark:text-gray-200"
         >
+          {t("contact.labelMessage")}
+        </label>
         <textarea
           name="message"
           id="message"
@@ -44,8 +54,8 @@ import Instagram from "./icons/Instagram.astro";
       </div>
       <div class="flex justify-center">
         <button
-          class="px-4 py-2 bg-blue-500 text-white rounded-md bg-gray-800 border border-gray-600 focus-visible:ring-blue-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
-          type="submit">Enviar mensaje</button
+          class="px-4 py-2 bg-blue-500 text-white rounded-md focus-visible:ring-blue-500/80 text-md hover:bg-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
+          type="submit">{t("contact.buttonSend")}</button
         >
       </div>
     </form>
@@ -53,7 +63,7 @@ import Instagram from "./icons/Instagram.astro";
   <section class="w-full md:w-1/3 px-6">
     <ul class="contact space-y-4">
       <li>
-        <h3 class="font-semibold">Email</h3>
+        <h3 class="font-semibold">{t("contact.emailTitle")}</h3>
         <a
           href="mailto:fedenavos@gmail.com"
           rel="external"
@@ -61,7 +71,7 @@ import Instagram from "./icons/Instagram.astro";
         >
       </li>
       <li>
-        <h3 class="font-semibold">Sociales</h3>
+        <h3 class="font-semibold">{t("contact.socialTitle")}</h3>
         <ul class="flex space-x-4 mt-2">
           <li>
             <a

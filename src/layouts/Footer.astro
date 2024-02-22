@@ -1,25 +1,35 @@
 ---
+import { t } from "i18next"
+import i18next from "i18next"
+
+const path = Astro.url.pathname;
+const isEnglishRoute = path.startsWith('/en');
+const currentLanguage = isEnglishRoute ? "/en" : "";
+
 const currentYear = new Date().getFullYear()
 ---
 
 <footer
-  class="rounded-lg shadow m-4 bg-black/5 dark:bg-black/20 backdrop-blur-lg w-full mx-auto container lg:max-w-4xl md:max-w-2xl mt-10 mb-10 flex justify-center"
+  class="rounded-lg shadow m-4 bg-black/5 dark:bg-black/20 backdrop-blur-lg w-full mx-auto container lg:max-w-4xl md:max-w-2xl p-1 mt-20 mb-10 flex justify-center"
 >
   <div
     class="w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between"
   >
     <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
       >© {currentYear}
-      <a href="https://federiconavos.com/" class="hover:underline">fedenavos</a>. Portfolio realizado en base a la plantilla de <a href="https://midu.dev/" class="hover:underline">midu.dev</a>
+      <a href="https://federiconavos.com/" class="hover:underline">fedenavos</a>. {t("footer.template")} <a href="https://midu.dev/" class="hover:underline">midu.dev</a>
     </span>
     <ul
       class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
     >
       <li>
-        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+        <a href=`${currentLanguage}/#experiencia` class="hover:underline me-4 md:me-6">{ t("header.experience.title") }</a>
       </li>
       <li>
-        <a href="/#contacto" class="hover:underline">Contacto</a>
+        <a href=`${currentLanguage}/#proyectos` class="hover:underline me-4 md:me-6">{ t("header.projects.title") }</a>
+      </li>
+      <li>
+        <a href=`${currentLanguage}/#sobre-mi` class="hover:underline me-4 md:me-6">{ t("header.aboutMe.title") }</a>
       </li>
     </ul>
   </div>

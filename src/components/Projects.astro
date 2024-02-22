@@ -1,51 +1,14 @@
 ---
 import GitHub from "./icons/GitHub.astro";
-import NextJS from "./icons/NextJS.astro";
-import Tailwind from "./icons/Tailwind.astro";
-import React from "./icons/React.astro";
-import Python from "./icons/Python.astro";
-import Flutter from "./icons/Flutter.astro";
-import Unity from "./icons/Unity.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
+import { t } from "i18next";
+import { TAGS } from "../constants/tags";
 
-const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
-  },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
-  },
-  REACT: {
-    name: "React",
-    class: "bg-[#3998B6] text-white",
-    icon: React,
-  },
-  PYTHON: {
-    name: "Python",
-    class: "bg-[#FFDC50] text-black",
-    icon: Python,
-  },
-  FLUTTER: {
-    name: "Flutter",
-    class: "bg-[#3586DB] text-white",
-    icon: Flutter,
-  },
-  UNITY: {
-    name: "Unity",
-    class: "bg-[#CCCCCC] text-black",
-    icon: Unity,
-  },
-};
 const PROJECTS = [
   {
-    title: "Chat-Bot",
-    description:
-      "Descubre mi Chat bot! Hecho con NextJS y herramientas IA de Cohere. Es una aplicación web que permite interactuar con un chat bot que responde preguntas sobre mi.",
+    title: t("projects.chat-bot.title"),
+    description: t("projects.chat-bot.description"),
     link: "https://mibot.vercel.app/",
     github: "https://github.com/fedenavos/chat-bot",
     logo: "/projects/chatbot.webp",
@@ -53,29 +16,25 @@ const PROJECTS = [
     tags: [TAGS.NEXT],
   },
   {
-    title: "Lookeando",
-    description:
-      "Aplicación web hecha con React en el front-end y Flask en el back-end. La plataforma conecta a los usuarios con diversos servicios de belleza, ofreciendo un mapa interactivo y reseñas auténticas.",
+    title: t("projects.lookeando.title"),
+    description: t("projects.lookeando.description"),
     link: "https://lookeando.com",
     logo: "/projects/lookeando.png",
     previewImage: "/projects/lookeando.png",
     tags: [TAGS.REACT, TAGS.PYTHON],
   },
   {
-    title: "Gather",
-    description:
-      "Proyecto final de carrera. Aplicación web hecha con Next JS. Una plataforma de carpooling que permite encontrar gente para viajar.",
+    title: t("projects.gather.title"),
+    description: t("projects.gather.description"),
     link: "https://gather-vert.vercel.app/",
     github: "https://github.com/fedenavos/Gather",
     logo: "/projects/gathertrips.png",
-    previewImage:
-      "https://camo.githubusercontent.com/04901a2aefe366bf5af999067b3f88f46ecc70a35a6578d0905c5b8c1d24fbfa/68747470733a2f2f692e696d6775722e636f6d2f706573534c4e612e706e67",
+    previewImage: "https://camo.githubusercontent.com/04901a2aefe366bf5af999067b3f88f46ecc70a35a6578d0905c5b8c1d24fbfa/68747470733a2f2f692e696d6775722e636f6d2f706573534c4e612e706e67",
     tags: [TAGS.NEXT],
   },
   {
-    title: "Repe-app",
-    description:
-      "Aplicación web hecha con React que permite hacer un seguimiento de las figuritas de tu álbum del mundial. También ofrece la posibilidad de ver el álbum del resto de los usuarios de la plataforma.",
+    title: t("projects.repe-app.title"),
+    description: t("projects.repe-app.description"),
     link: "https://repe-app.vercel.app",
     github: "https://github.com/fedenavos/repe-app",
     logo: "/projects/qatar-2022.jpg",
@@ -83,9 +42,8 @@ const PROJECTS = [
     tags: [TAGS.REACT],
   },
   {
-    title: "Pelibry",
-    description:
-      "App móvil desarrollada con Flutter. Permite anotar películas vistas, puntuarlas y escribir reseñas. Con el nombre de usuario se pueden ver las películas anotadas por otros usuarios.",
+    title: t("projects.pelibry.title"),
+    description: t("projects.pelibry.description"),
     link: "projects/pelibry",
     github: "https://github.com/fedenavos/pelibry_app",
     logo: "/projects/Pelibry.webp",
@@ -93,9 +51,8 @@ const PROJECTS = [
     tags: [TAGS.FLUTTER],
   },
   {
-    title: "Quedate en casa",
-    description:
-      "Videojuego móvil creado con Unity. El juego fue desarrollado completamente desde cero. Se emplearon plantillas de Unity para los personajes y se crearon algunos diseños propios para añadir un toque único al juego.",
+    title: t("projects.quedate-en-casa.title"),
+    description: t("projects.quedate-en-casa.description"),
     link: "projects/coronatime",
     logo: "/projects/coronatime-logo.png",
     previewImage: "/projects/coronatime-game2.jpg",

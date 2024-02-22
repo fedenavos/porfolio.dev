@@ -1,35 +1,22 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
-const EXPERIENCIE = [
-  {
-    date: "Actualmente...",
-    title: "Desarrollador Python",
-    company: "DXC Technology",
-    description:
-      "Mis responsabilidades se centran en impulsar la transición tecnológica a los servicios en la nube de AWS para el cliente Arcos Dorados. Estoy activamente involucrado en el desarrollo de funciones serverless utilizando AWS Lambda e implementando Infraestructura como Código con AWS CDK.",
-  },
-  {
-    date: "Septiembre 2021 - Abril 2023",
-    title: "Desarrollador Python",
-    company: "GP Trading",
-    description:
-      "Fui responsable de desarrollar, implementar y hacer backtesting de estrategias de trading, elaboración de informes, crear sistemas de alerta de señales automáticas vía email, recolectar datos para la toma de decisiones mediante scraping, entre otras tareas.",
-  },
-  {
-    date: "Diciembre 2020 - Abril 2021",
-    title: "Desarrollador Full-Stack",
-    company: "NEORIS",
-    description:
-      "Trabajé como parte de un equipo web, brindando soluciones a una empresa agropecuaria. Mis responsabilidades incluyeron el desarrollo Front-end y Back-end de aplicaciones web y solución de incidencias. Utilicé tecnologías como TypeScript, Angular, HTML5, SQL Server y otras herramientas .NET." 
-  }
-];
+import { t } from "i18next";
+
+interface Experience {
+  date: string;
+  title: string;
+  company: string;
+  description: string;
+}
+
+const EXPERIENCE = t("experience", { returnObjects: true }) as Experience[];
 ---
 
 <ol class="relative mt-16">
   {
-    EXPERIENCIE.map((experiencie) => (
+    EXPERIENCE.map((experience: any) => (
       <li class="">
-        <ExperienceItem {...experiencie} />
+        <ExperienceItem {...experience} />
       </li>
     ))
   }
