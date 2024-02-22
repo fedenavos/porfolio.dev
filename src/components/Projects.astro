@@ -1,9 +1,10 @@
 ---
-import GitHub from "./icons/GitHub.astro";
-import Link from "./icons/Link.astro";
-import LinkButton from "./LinkButton.astro";
+import { Image } from 'astro:assets';
 import { t } from "i18next";
 import { TAGS } from "../constants/tags";
+import LinkButton from "./LinkButton.astro";
+import GitHub from "./icons/GitHub.astro";
+import Link from "./icons/Link.astro";
 
 const PROJECTS = [
   {
@@ -67,11 +68,13 @@ const PROJECTS = [
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/3">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl">
-            <img
+            <Image
+              title={title}
               alt={title}
               class="h-54 aspect-square transition duration-500 sm:h-full md:scale-100 md:group-hover:scale-110"
-              loading="lazy"
               src={logo}
+              width={300}
+              height={300}
             />
           </div>
         </div>
