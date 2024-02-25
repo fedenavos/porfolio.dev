@@ -77,9 +77,10 @@
     }
   },
   "aboutMe": {
-    "paragraph1": "My name is Federico Navós, and my friends call me Fede. I am 23 years old and from Rosario. I completed my studies as an <strong>Information Systems Engineer</strong> at the end of 2022.",
-    "paragraph2": "With skills in <strong>Python and React</strong>, my specialty is bringing ideas to life through Full Stack development. For me, being a developer goes beyond programming; it's a process of exploration and creation.",
-    "paragraph3": "Beyond looking to expand my technological stack, I enjoy researching new technologies and how they can impact people's lives. I am excited about the future of <strong>artificial intelligence</strong> and <strong>cryptocurrencies</strong>, which has led me to give talks on these topics."
+    "paragraph1": "My name is Federico, and I am 23 years old. I was born in Buenos Aires, but we moved to Rosario 20 years ago. I completed my studies as an <strong>Information Systems Engineer</strong> at the end of 2022 at UTN Rosario.",
+    "paragraph2": "In 2023, I had the honor of receiving the <strong>'Ing. Isidoro Marín'</strong> award, granted by the National Academy of Engineering of the Argentine Republic. This award is a recognition of outstanding engineering graduates nationwide, reflecting my effort and dedication in my studies at UTN.",
+    "paragraph3": "With skills in <strong>Python and React</strong>, my specialty is bringing ideas to life through Full Stack development. For me, being a developer goes beyond programming; it's a process of exploration and creation.",
+    "paragraph4": "Beyond looking to expand my technological stack, I enjoy researching new technologies and how they can impact people's lives. I am excited about the future of <strong>artificial intelligence</strong> and <strong>cryptocurrencies</strong>, which has led me to give talks on these topics."
   },
   "contact": {
     "labelName": "Name",

@@ -77,9 +77,10 @@
     }
   },
   "aboutMe": {
-    "paragraph1": "Me llamo Federico Navós y mis amigos me dicen Fede. Tengo 23 años y soy de Rosario. Terminé mis estudios como <strong>Ingeniero en Sistemas de Información</strong> a fines del 2022.",
-    "paragraph2": "Con habilidades en <strong>Python y React</strong>, mi especialidad es dar vida a las ideas mediante el desarrollo Full Stack. Para mí, ser desarrollador va más allá de programar; es un proceso de exploración y creación.",
-    "paragraph3": "Más allá de buscar ampliar mi stack tecnológico, me gusta investigar sobre nuevas tecnologías y cómo estas pueden impactar en la vida de las personas. Me entusiasma el futuro de la <strong>inteligencia artificial</strong> y también el de la <strong>criptomonedas</strong>, lo que me ha llevado a realizar charlas sobre estos temas."
+    "paragraph1": "Me llamo Federico y tengo 23 años. Nací en Buenos Aires, pero hace 20 años nos mudamos a Rosario. Terminé mis estudios como <strong>Ingeniero en Sistemas de Información</strong> a fines del 2022 en la UTN Rosario.",
+    "paragraph2": "En el 2023 tuve el honor de recibir el premio <strong>'Ing. Isidoro Marín'</strong>, otorgado por la Academia Nacional de Ingeniería de la República Argentina. Este premio es un reconocimiento a los egresados destacados de ingeniería a nivel nacional, lo cual refleja mi esfuerzo y dedicación en mis estudios en la UTN.",
+    "paragraph3": "Con habilidades en <strong>Python y React</strong>, mi especialidad es dar vida a las ideas mediante el desarrollo Full Stack. Para mí, ser desarrollador va más allá de programar; es un proceso de exploración y creación.",
+    "paragraph4": "Más allá de buscar ampliar mi stack tecnológico, me gusta investigar sobre nuevas tecnologías y cómo estas pueden impactar en la vida de las personas. Me entusiasma el futuro de la <strong>inteligencia artificial</strong> y también el de la <strong>criptomonedas</strong>, lo que me ha llevado a realizar charlas sobre estos temas."
   },
   "contact": {
     "labelName": "Nombre",
