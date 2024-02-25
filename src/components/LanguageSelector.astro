@@ -25,11 +25,11 @@ const currentLanguage = i18next.language;
     <span class="sr-only">Elige el idioma</span>
     {
       currentLanguage === "en" ? (
-        <EnglishIcon id="english" class="language-toggle-icon transition-all" />
+        <EnglishIcon id="english" class="language-toggle-icon transition-all w-6 h-6 absolute" />
       ) : (
         <SpanishIcon
           id="spanish"
-          class="language-toggle-icon absolute transition-all"
+          class="language-toggle-icon absolute transition-all w-6 h-6"
         />
       )
     }
