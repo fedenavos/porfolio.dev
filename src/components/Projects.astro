@@ -1,10 +1,18 @@
 ---
 import { Image } from 'astro:assets';
 import { t } from "i18next";
+import i18next from "i18next"
 import { TAGS } from "../constants/tags";
 import LinkButton from "./LinkButton.astro";
 import GitHub from "./icons/GitHub.astro";
 import Link from "./icons/Link.astro";
+
+const currentLanguage = i18next.language
+let pathPrefix = ""
+if (currentLanguage !== "es") {
+  pathPrefix = `${currentLanguage}/`
+}
+console.log(pathPrefix)
 
 const PROJECTS = [
   {
@@ -45,7 +53,7 @@ const PROJECTS = [
   {
     title: t("projects.pelibry.title"),
     description: t("projects.pelibry.description"),
-    link: "projects/pelibry",
+    link: `${pathPrefix}projects/pelibry`,
     github: "https://github.com/fedenavos/pelibry_app",
     logo: "/projects/Pelibry.webp",
     previewImage: "/projects/pelibry-main.jpg",
@@ -54,7 +62,7 @@ const PROJECTS = [
   {
     title: t("projects.quedate-en-casa.title"),
     description: t("projects.quedate-en-casa.description"),
-    link: "projects/coronatime",
+    link: `${pathPrefix}projects/coronatime`,
     logo: "/projects/coronatime-logo.png",
     previewImage: "/projects/coronatime-game2.jpg",
     tags: [TAGS.UNITY],
