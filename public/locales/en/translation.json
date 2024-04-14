@@ -34,6 +34,12 @@
     {
       "date": "Currently...",
       "title": "Python Developer",
+      "company": "Fiwind",
+      "description": "I develop applications using Flask for the automated execution of trading strategies on various financial instruments, integrating real-time data through APIs from crypto and traditional markets. Additionally, I design and develop real-time graphics to monitor market variables using Dash."
+    },
+    {
+      "date": "April 2023 - March 2024",
+      "title": "Python Developer",
       "company": "DXC Technology",
       "description": "My responsibilities focus on driving the technological transition to AWS cloud services for the client Arcos Dorados. I am actively involved in the development of serverless functions using AWS Lambda and implementing Infrastructure as Code with AWS CDK."
     },
