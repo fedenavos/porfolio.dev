@@ -21,7 +21,7 @@
     "salutation": "Hey, I'm Fede",
     "aboutLink": "Learn more about me",
     "profession": "Information Systems Engineer",
-    "description": "from Rosario, Argentina. +3 years of backend development experience with Python and frontend development skills with React.",
+    "description": "from Rosario, Argentina. +5 years of backend development experience with Python and frontend development skills with React.",
     "contactMe": "Contact Me"
   },
   "titles": {
@@ -59,10 +59,10 @@
   "projects": {
     "brickforge": {
       "title": "BrickForge",
-      "description": "Project developed as the final work of the Diploma in Blockchain and Digital Finance (UTN BA). A tokenization platform for investment pools applied to financial trusts. It uses smart contracts to lock capital, release funds only for validated milestones, and issue tokens representing investors' participation. It combines Web3 product design, Solidity, wallet integration, and tokenization applied to real estate."
+      "description": "Project developed as the final work of the Diploma in Blockchain. A tokenization platform for investment pools applied to financial trusts. It uses smart contracts to lock capital, release funds only for validated milestones, and issue tokens representing investors' participation. It combines Web3 product design, Solidity, wallet integration, and tokenization applied to real estate."
     },
     "movida-electronica-rosario": {
-      "title": "Movida Electrónica Rosario",
+      "title": "Techno Move Rosario",
       "description": "A web platform that centralizes, organizes and displays all upcoming electronic music events in Rosario, Argentina. It offers a monthly and weekly calendar view, advanced filters, event detail pages, and commercial spaces such as banners and highlighted events. It serves as the official website of the Instagram account @movidaelectronicarosario."
     },
     "chat-bot": {
@@ -91,7 +91,7 @@
     }
   },
   "aboutMe": {
-    "paragraph1": "My name is Federico, and I am 23 years old. I was born in Buenos Aires, but we moved to Rosario 20 years ago. I completed my studies as an <strong>Information Systems Engineer</strong> at the end of 2022 at UTN Rosario.",
+    "paragraph1": "My name is Federico, and I am 25 years old. I was born in Buenos Aires, but we moved to Rosario 20 years ago. I completed my studies as an <strong>Information Systems Engineer</strong> at the end of 2022 at UTN Rosario.",
     "paragraph2": "In 2023, I had the honor of receiving the <strong>'Ing. Isidoro Marín'</strong> award, granted by the National Academy of Engineering of the Argentine Republic. This award is a recognition of outstanding engineering graduates nationwide, reflecting my effort and dedication in my studies at UTN.",
     "paragraph3": "With skills in <strong>Python and React</strong>, my specialty is bringing ideas to life through Full Stack development. For me, being a developer goes beyond programming; it's a process of exploration and creation.",
     "paragraph4": "Beyond looking to expand my technological stack, I enjoy researching new technologies and how they can impact people's lives. I am excited about the future of <strong>artificial intelligence</strong> and <strong>cryptocurrencies</strong>, which has led me to give talks on these topics."

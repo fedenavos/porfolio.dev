@@ -1,19 +1,27 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import { t } from "i18next";
-import i18next from "i18next"
+import i18next from "i18next";
 import { TAGS } from "../constants/tags";
 import LinkButton from "./LinkButton.astro";
 import GitHub from "./icons/GitHub.astro";
 import Link from "./icons/Link.astro";
 
-const currentLanguage = i18next.language
-let pathPrefix = ""
+const currentLanguage = i18next.language;
+let pathPrefix = "";
 if (currentLanguage !== "es") {
-  pathPrefix = `${currentLanguage}/`
+  pathPrefix = `${currentLanguage}/`;
 }
 
 const PROJECTS = [
+  {
+    title: t("projects.brickforge.title"),
+    description: t("projects.brickforge.description"),
+    link: "https://brickforge.vercel.app",
+    logo: "/projects/brickforge.png",
+    previewImage: "/projects/brickforge-demo.png",
+    tags: [TAGS.NEXT],
+  },
   {
     title: t("projects.movida-electronica-rosario.title"),
     description: t("projects.movida-electronica-rosario.description"),
@@ -21,6 +29,14 @@ const PROJECTS = [
     logo: "/projects/movida-rosario.png",
     previewImage: "/projects/movida-demo.png",
     tags: [TAGS.NEXT],
+  },
+  {
+    title: t("projects.lookeando.title"),
+    description: t("projects.lookeando.description"),
+    link: "https://lookeando.com",
+    logo: "/projects/lookeando.png",
+    previewImage: "/projects/lookeando-demo.png",
+    tags: [TAGS.REACT, TAGS.PYTHON],
   },
   {
     title: t("projects.chat-bot.title"),
@@ -32,20 +48,12 @@ const PROJECTS = [
     tags: [TAGS.NEXT],
   },
   {
-    title: t("projects.lookeando.title"),
-    description: t("projects.lookeando.description"),
-    link: "https://lookeando.com",
-    logo: "/projects/lookeando.png",
-    previewImage: "/projects/lookeando.png",
-    tags: [TAGS.REACT, TAGS.PYTHON],
-  },
-  {
     title: t("projects.gather.title"),
     description: t("projects.gather.description"),
     link: "https://gather-vert.vercel.app/",
     github: "https://github.com/fedenavos/Gather",
     logo: "/projects/gathertrips.png",
-    previewImage: "https://camo.githubusercontent.com/04901a2aefe366bf5af999067b3f88f46ecc70a35a6578d0905c5b8c1d24fbfa/68747470733a2f2f692e696d6775722e636f6d2f706573534c4e612e706e67",
+    previewImage: "/projects/gather-demo.png",
     tags: [TAGS.NEXT],
   },
   {
@@ -79,59 +87,72 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ logo, title, description, tags, link, github }) => (
-      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-        <div class="w-full md:w-1/3">
-          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl">
-            <Image
-              title={title}
-              alt={title}
-              class="h-54 aspect-square transition duration-500 sm:h-full md:scale-100 md:group-hover:scale-110"
-              src={logo}
-              width={300}
-              height={300}
-            />
-          </div>
-        </div>
+    PROJECTS.map(
+      ({ logo, title, description, previewImage, tags, link, github }) => (
+        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+          <div class="w-full md:w-1/3">
+            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-hidden rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl">
+              <Image
+                title={title}
+                alt={title}
+                class="h-54 aspect-square transition duration-500 sm:h-full md:group-hover:opacity-0"
+                src={logo}
+                width={300}
+                height={300}
+              />
 
-        <div class="w-full md:w-2/3 md:max-w-lg">
-          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-            {title}
-          </h3>
-          <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
-              {tags.map((tag) => (
-                <li>
-                  <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-                  >
-                    {tag.icon && <tag.icon class="size-4" />}
-                    {tag.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <div class="mt-2 text-gray-700 dark:text-gray-400">
-              {description}
+              {previewImage && (
+                <Image
+                  title={`${title} preview`}
+                  alt={`${title} preview`}
+                  class="absolute inset-0 h-54 aspect-square object-cover opacity-0 transition duration-500 md:group-hover:opacity-100"
+                  src={previewImage}
+                  width={600}
+                  height={600}
+                />
+              )}
             </div>
-            <footer class="flex items-end justify-start mt-4 gap-x-4">
-              {github && (
-                <LinkButton href={github}>
-                  <GitHub class="size-6" />
-                  Code
-                </LinkButton>
-              )}
-              {link && (
-                <LinkButton href={link}>
-                  <Link class="size-4" />
-                  Preview
-                </LinkButton>
-              )}
-            </footer>
           </div>
-        </div>
-      </article>
-    ))
+
+          <div class="w-full md:w-2/3 md:max-w-lg">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              {title}
+            </h3>
+            <div class="flex flex-wrap mt-2">
+              <ul class="flex flex-row mb-2 gap-x-2">
+                {tags.map((tag) => (
+                  <li>
+                    <span
+                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    >
+                      {tag.icon && <tag.icon class="size-4" />}
+                      {tag.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <div class="mt-2 text-gray-700 dark:text-gray-400">
+                {description}
+              </div>
+              <footer class="flex items-end justify-start mt-4 gap-x-4">
+                {github && (
+                  <LinkButton href={github}>
+                    <GitHub class="size-6" />
+                    Code
+                  </LinkButton>
+                )}
+                {link && (
+                  <LinkButton href={link}>
+                    <Link class="size-4" />
+                    Preview
+                  </LinkButton>
+                )}
+              </footer>
+            </div>
+          </div>
+        </article>
+      ),
+    )
   }
 </div>
