@@ -1,0 +1,27 @@
+---
+import i18next from "i18next";
+
+const supportedLanguages =
+  i18next.languages?.length ? i18next.languages : ["es", "en"];
+const { origin, pathname, search } = Astro.url;
+const normalizedPath = pathname.replace(/^\/en(\/|$)/, "/") || "/";
+
+const buildHref = (language: string) => {
+  const localizedPath =
+    language === "es"
+      ? normalizedPath
+      : `/en${normalizedPath === "/" ? "" : normalizedPath}`;
+
+  return `${origin}${localizedPath}${search}`;
+};
+---
+
+{
+  supportedLanguages.map((supportedLanguage) => (
+    <link
+      rel="alternate"
+      hreflang={supportedLanguage}
+      href={buildHref(supportedLanguage)}
+    />
+  ))
+}
