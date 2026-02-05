@@ -12,9 +12,16 @@ let pathPrefix = ""
 if (currentLanguage !== "es") {
   pathPrefix = `${currentLanguage}/`
 }
-console.log(pathPrefix)
 
 const PROJECTS = [
+  {
+    title: t("projects.movida-electronica-rosario.title"),
+    description: t("projects.movida-electronica-rosario.description"),
+    link: "https://movidarosario.vercel.app",
+    logo: "/projects/movida-rosario.png",
+    previewImage: "/projects/movida-demo.png",
+    tags: [TAGS.NEXT],
+  },
   {
     title: t("projects.chat-bot.title"),
     description: t("projects.chat-bot.description"),

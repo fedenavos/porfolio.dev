@@ -57,6 +57,14 @@
     }
   ],
   "projects": {
+    "brickforge": {
+      "title": "BrickForge",
+      "description": "Project developed as the final work of the Diploma in Blockchain and Digital Finance (UTN BA). A tokenization platform for investment pools applied to financial trusts. It uses smart contracts to lock capital, release funds only for validated milestones, and issue tokens representing investors' participation. It combines Web3 product design, Solidity, wallet integration, and tokenization applied to real estate."
+    },
+    "movida-electronica-rosario": {
+      "title": "Movida Electrónica Rosario",
+      "description": "A web platform that centralizes, organizes and displays all upcoming electronic music events in Rosario, Argentina. It offers a monthly and weekly calendar view, advanced filters, event detail pages, and commercial spaces such as banners and highlighted events. It serves as the official website of the Instagram account @movidaelectronicarosario."
+    },
     "chat-bot": {
       "title": "Chat-bot",
       "description": "Discover my Chat bot! Made with NextJS and Cohere's AI tools. It's a web application that allows interacting with a chat bot answering questions about me."
